@@ -1,0 +1,36 @@
+{
+    "hostID": "host-000",
+    "location": "GW0",
+    "intmsgbrkport": 12345,
+    "comservices": [{
+            "id": "redis.000",
+            "ip": "127.0.0.1",
+            "port": 20000,
+            "extip": "127.0.0.1",
+            "extport": 6379
+        },
+        {
+            "id": "api.000",
+            "ip": "127.0.0.1",
+            "port": 20001,
+            "extip": "127.0.0.1",
+            "extport": 6379
+
+        }
+    ],
+    "drivers": ["own.000", "fake.000"],
+    "managers": [{
+        "id": "mngr.000",
+        "group": "home",
+        "typem": "local_manager",
+        "algo": ["energy_manager.000", "security_manager.000"]
+    }],
+    "devices": [{
+        "id": "light.000",
+        "group": "home",
+        "location": "albert's home",
+        "fclass": "BinaryLight",
+        "driver": "own.000",
+        "commands": ["ON.00", "OFF.000"]
+    }]
+}
